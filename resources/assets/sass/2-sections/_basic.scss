@@ -1,5 +1,5 @@
 .basic {
-	@include space-after;
+	@include space-after(2);
 
 	.image {
 		width: 150px;

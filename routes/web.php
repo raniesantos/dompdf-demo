@@ -16,4 +16,11 @@ Route::get('/generate', function () {
 	$mobile = true;
 	$pdf_b = PDF::loadView('resume', compact('my', 'mobile'))
 		->save('pdf/ranie-santos-resume-b.pdf');
+
+	Zipper::make(public_path('zip/resume.zip'))->add([
+		public_path('pdf/ranie-santos-resume-a.pdf'),
+		public_path('pdf/ranie-santos-resume-b.pdf'),
+	])->close();
+
+	return response()->download(public_path('zip/resume.zip'));
 });
