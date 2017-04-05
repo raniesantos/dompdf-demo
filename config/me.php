@@ -39,24 +39,93 @@ return [
 	// Work Experience
 	//-------------------------------------------------------------------------
 	'jobs' => [
-		'',
-		'',
+		[
+			'start' => date_format(date_create('2014-06-16'), 'M j, Y'),
+			'end' => date_format(date_create('2014-09-22'), 'M j, Y'),
+			'position' => 'Computer Technician (Intern)',
+			'location' => "Center for Institutional Information Technology\n(Pasig Catholic College)",
+			'tasks' => [
+				'Maintenance and troubleshooting of computer hardware and software',
+				'Assisting with setup of computer equipment such as system units and LCD projectors',
+			],
+		],
 	],
 
 	//-------------------------------------------------------------------------
 	// Education
 	//-------------------------------------------------------------------------
-	'schools' => [
-		'',
-		'',
+	'education' => [
+		[
+			'name' => 'Tertiary',
+			'schools' => [
+				[
+					'name' => 'Jose Rizal University',
+					'address' => '80​​Shaw Blvd., Mandaluyong City',
+					'course' => 'Bachelor of Science in Information Technology',
+					'start' => 2010,
+					'end' => 2015,
+				],
+				[
+					'name' => 'AMA Computer College - Pasig',
+					'address' => 'Silver Tree Bldg., One San Miguel Ave., Ortigas Center, Pasig City',
+					'course' => 'Bachelor of Science in Information Technology',
+					'start' => 2008,
+					'end' => 2010,
+				],
+			],
+		],
+		[
+			'name' => 'Secondary',
+			'schools' => [
+				[
+					'name' => 'La Consolacion College - Pasig',
+					'address' => '641 Mercedes Avenue, San Miguel, Pasig City',
+					'course' => null,
+					'start' => 2004,
+					'end' => 2008,
+				],
+			],
+		],
+		[
+			'name' => 'Primary',
+			'schools' => [
+				[
+					'name' => 'La Consolacion College - Pasig',
+					'address' => '641 Mercedes Avenue, San Miguel, Pasig City',
+					'course' => null,
+					'start' => 2000,
+					'end' => 2004,
+				],
+				[
+					'name' => 'Lourdes School of Mandaluyong',
+					'address' => 'St.Francis, Mandaluyong City',
+					'course' => null,
+					'start' => 1998,
+					'end' => 2000,
+				],
+			],
+		],
 	],
 
 	//-------------------------------------------------------------------------
 	// Seminars
 	//-------------------------------------------------------------------------
 	'seminars' => [
-		'',
-		'',
+		[
+			'topic' => 'iOS Seminar',
+			'venue' => 'JRU Auditorium, Jose Rizal University, Mandaluyong City',
+			'date' => date_format(date_create('2014-07-18'), 'F j, Y'),
+		],
+		[
+			'topic' => 'Hack Speak and Secure Coding Seminar',
+			'venue' => 'JRU Auditorium, Jose Rizal University, Mandaluyong City',
+			'date' => date_format(date_create('2014-08-20'), 'F j, Y'),
+		],
+		[
+			'topic' => 'IBM Bluemix Seminar and Unity 3D Seminar',
+			'venue' => 'JRU Auditorium, Jose Rizal University, Mandaluyong City',
+			'date' => date_format(date_create('2014-11-15'), 'F j, Y'),
+		],
 	],
 
 	//-------------------------------------------------------------------------

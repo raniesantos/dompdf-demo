@@ -1,0 +1,34 @@
+html {
+	margin: 70px 90px;
+}
+
+body {
+	font-family: Helvetica;
+	font-size: 14px;
+}
+
+img {
+	display: block;
+}
+
+a {
+	color: #1154CD;
+}
+
+ul{
+	list-style-type: disc;
+	padding-left: $indent-size;
+
+	& li ul {
+		list-style-type: circle;
+	}
+}
+
+header {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	border-top: 2px solid #ccc;
+	text-align: center;
+	@include space-after;
+}

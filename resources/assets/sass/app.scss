@@ -1,2 +1,26 @@
-// Resets
-@import "resets";
+// ===================================
+// Core
+// ===================================
+@import "0-core/variables";
+@import "0-core/mixins";
+
+
+// ===================================
+// Base
+// ===================================
+@import "1-base/resets";
+@import "1-base/defaults";
+
+
+// ===================================
+@import "modifiers";
+
+
+// ===================================
+// Sections
+// ===================================
+@import "2-sections/basic";
+@import "2-sections/skills";
+@import "2-sections/work";
+@import "2-sections/education";
+@import "2-sections/seminars";

@@ -1,0 +1,11 @@
+@mixin space-after($lines: 1) {
+	margin-bottom: $space-height * $lines;
+}
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}

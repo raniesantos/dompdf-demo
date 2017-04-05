@@ -1,0 +1,9 @@
+.education {
+	.school {
+		@include space-after;
+
+		.year {
+			width: 150px;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.work {
+	.job, .main {
+		@include space-after;
+	}
+
+	.date {
+		width: 230px;
+	}
+}
