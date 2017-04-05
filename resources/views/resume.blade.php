@@ -7,6 +7,18 @@
 	<link rel="stylesheet" href="{{ asset('css/resume.css') }}">
 </head>
 <body>
-	@yield('content')
+
+	@include('sections.basic')
+
+	@include('sections.skills')
+
+	@include('sections.work')
+
+	@include('sections.education')
+
+	@include('sections.seminars')
+
+	@include('sections.achievements')
+
 </body>
 </html>

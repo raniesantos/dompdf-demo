@@ -4,32 +4,16 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/test', function () {
-	$my = json_decode(json_encode(config('me')));
-});
-
-Route::get('pdf/a', function () {
+Route::get('/generate', function () {
 	$my = json_decode(json_encode(config('me')));
 
 	// public, no mobile number
-	$pdf = PDF::loadView('a', compact('my'));
-	return $pdf->download('ranie-santos-resume.pdf');
-});
-
-Route::get('html/a', function () {
-	$my = json_decode(json_encode(config('me')));
-	return view('a', compact('my'));
-});
-
-Route::get('pdf/b', function () {
-	$my = json_decode(json_encode(config('me')));
+	$mobile = false;
+	$pdf_a = PDF::loadView('resume', compact('my', 'mobile'))
+		->save('pdf/ranie-santos-resume-a.pdf');
 
 	// private, has mobile number
-	$pdf = PDF::loadView('b', compact('my'));
-	return $pdf->download('ranie-santos-resume-b.pdf');
-});
-
-Route::get('html/b', function () {
-	$my = json_decode(json_encode(config('me')));
-	return view('b', compact('my'));
+	$mobile = true;
+	$pdf_b = PDF::loadView('resume', compact('my', 'mobile'))
+		->save('pdf/ranie-santos-resume-b.pdf');
 });
