@@ -60,7 +60,7 @@ return [
 			'schools' => [
 				[
 					'name' => 'Jose Rizal University',
-					'address' => '80​​Shaw Blvd., Mandaluyong City',
+					'address' => '80 Shaw Blvd., Mandaluyong City',
 					'course' => 'Bachelor of Science in Information Technology',
 					'start' => 2010,
 					'end' => 2015,
