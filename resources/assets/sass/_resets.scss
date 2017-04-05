@@ -1,0 +1,86 @@
+/* resets.css by Ranie Santos */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	font-size: 100%;
+	color: #000;
+	background: transparent;
+	-webkit-text-size-adjust:100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font: inherit;
+}
+
+header, nav, main, aside, section, article, footer, img{
+	display: block;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+img{
+  border: none;
+}
+
+input,
+textarea,
+button
+{
+	border: none;
+	outline: none;
+	font: inherit;
+	color: inherit;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+textarea
+{
+	border: 1px solid #999;
+	background: inherit;
+}
+
+textarea{
+	resize: none;
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+	margin: 0 5px;
+}
+
+select{
+	border: 1px solid #999;
+	outline: none;
+	font: inherit;
+}
+
+option{
+	padding: 0 5px
+}
