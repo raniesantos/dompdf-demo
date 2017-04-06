@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', 'Web Preview')
+
 @section('styles')
 	<link rel="stylesheet" href="{{ asset('css/resume-web.css') }}">
 @stop
