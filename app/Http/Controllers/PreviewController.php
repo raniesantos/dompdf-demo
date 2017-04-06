@@ -7,6 +7,7 @@ use PDF;
 
 class PreviewController extends Controller
 {
+
 	public function pdf() {
 		return PDF::loadView('resume', ['mobile' => true])->stream();
 	}
@@ -14,4 +15,5 @@ class PreviewController extends Controller
 	public function web() {
 		return view('web', ['mobile' => true]);
 	}
+
 }

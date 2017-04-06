@@ -8,25 +8,27 @@ use Zipper;
 
 class DownloadController extends Controller
 {
+
 	public function download() {
 		// public, no mobile number
-		$pdf_a = PDF::loadView('resume', ['mobile' => false])
+		PDF::loadView('resume', ['mobile' => false])
 			->save('pdf/ranie-santos-resume-a.pdf');
 
 		// private, has mobile number
-		$pdf_b = PDF::loadView('resume', ['mobile' => true])
+		PDF::loadView('resume', ['mobile' => true])
 			->save('pdf/ranie-santos-resume-b.pdf');
 
-		$zipFileName = 'resume-' . strtolower(date('M.d.Y-H.i.s')) . '.zip';
-		$zipFilePath = public_path("zip/{$zipFileName}");
+		$zipName = 'resume-' . strtolower(date('M.d.Y-H.i.s')) . '.zip';
+		$zipPath = public_path('zip/' . $zipName);
 
-		Zipper::make($zipFilePath)->add([
+		Zipper::make($zipPath)->add([
 			public_path('pdf/ranie-santos-resume-a.pdf'),
 			public_path('pdf/ranie-santos-resume-b.pdf'),
 		])->close();
 
 		return response()
-			->download($zipFilePath)
+			->download($zipPath)
 			->deleteFileAfterSend(true);
 	}
+
 }
