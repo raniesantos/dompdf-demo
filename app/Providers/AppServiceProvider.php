@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $my = json_decode(json_encode(config('me')));
+        view()->share(compact('my'));
     }
 
     /**

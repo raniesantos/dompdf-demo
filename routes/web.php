@@ -4,17 +4,21 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/generate', function () {
-	$my = json_decode(json_encode(config('me')));
+Route::get('/preview/pdf', function () {
+	return PDF::loadView('resume', ['mobile' => true])->stream();
+});
 
+Route::get('/preview/web', function () {
+	return view('resume', ['mobile' => true]);
+});
+
+Route::get('/generate', function () {
 	// public, no mobile number
-	$mobile = false;
-	$pdf_a = PDF::loadView('resume', compact('my', 'mobile'))
+	$pdf_a = PDF::loadView('resume', ['mobile' => false])
 		->save('pdf/ranie-santos-resume-a.pdf');
 
 	// private, has mobile number
-	$mobile = true;
-	$pdf_b = PDF::loadView('resume', compact('my', 'mobile'))
+	$pdf_b = PDF::loadView('resume', ['mobile' => true])
 		->save('pdf/ranie-santos-resume-b.pdf');
 
 	Zipper::make(public_path('zip/resume.zip'))->add([
