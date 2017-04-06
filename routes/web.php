@@ -9,7 +9,7 @@ Route::get('/preview/pdf', function () {
 });
 
 Route::get('/preview/web', function () {
-	return view('resume', ['mobile' => true]);
+	return view('web', ['mobile' => true]);
 });
 
 Route::get('/generate', function () {

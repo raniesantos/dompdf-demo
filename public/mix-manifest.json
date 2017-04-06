@@ -1,5 +1,6 @@
 {
   "/mix.js": "/mix.js",
-  "/css/resume.css": "/css/resume.css",
+  "/css/resume-pdf.css": "/css/resume-pdf.css",
+  "/css/resume-web.css": "/css/resume-web.css",
   "/css/app.css": "/css/app.css"
 }
