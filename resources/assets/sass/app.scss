@@ -1,0 +1,41 @@
+@import "resume/1-base/resets";
+
+body {
+	background: #333;
+	color: #eee;
+	text-align: center;
+}
+
+header {
+	background: #444;
+	padding: 20px 0;
+	box-shadow: 0 5px 10px 1px #222;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+
+a {
+	font-weight: bold;
+	padding: 20px 0;
+	display: block;
+	width: 300px;
+	margin: 70px auto;
+	box-shadow: 0 5px 10px 1px #222;
+	transition: all 0.4s;
+
+	&:hover {
+		box-shadow: 0 5px 10px 1px #000;
+	}
+}
+
+.pdf {
+	background: #c0392b;
+}
+
+.web {
+	background: #2980b9;
+}
+
+.download {
+	background: #27ae60;
+}

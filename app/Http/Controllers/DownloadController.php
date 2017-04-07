@@ -11,22 +11,21 @@ class DownloadController extends Controller
 	public function download() {
 		// public, no mobile number
 		PDF::loadView('resume', ['mobile' => false])
-			->save('pdf/ranie-santos-resume-a.pdf');
+			->save($pdfA = 'pdf/ranie-santos-resume-a.pdf');
 
 		// private, has mobile number
 		PDF::loadView('resume', ['mobile' => true])
-			->save('pdf/ranie-santos-resume-b.pdf');
+			->save($pdfB = 'pdf/ranie-santos-resume-b.pdf');
 
-		$zipName = 'resume-' . strtolower(date('M.d.Y-H.i.s')) . '.zip';
-		$zipPath = public_path('zip/' . $zipName);
+		$zipFilename = 'resume-' . strtolower(date('M.d.Y-H.i.s')) . '.zip';
 
-		Zipper::make($zipPath)->add([
-			public_path('pdf/ranie-santos-resume-a.pdf'),
-			public_path('pdf/ranie-santos-resume-b.pdf'),
+		Zipper::make($zip = public_path('zip/' . $zipFilename))->add([
+			public_path($pdfA),
+			public_path($pdfB),
 		])->close();
 
 		return response()
-			->download($zipPath)
+			->download($zip)
 			->deleteFileAfterSend(true);
 	}
 
