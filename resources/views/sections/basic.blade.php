@@ -16,3 +16,7 @@
 	</div>
 
 </section>
+
+@foreach(range(1, $my->spaces) as $s)
+	<div class="space-block"></div>
+@endforeach
