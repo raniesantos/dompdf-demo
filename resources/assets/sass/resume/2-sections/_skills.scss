@@ -1,5 +1,9 @@
 .skills {
 	& > ul > li {
 		@include space-after;
+
+		ul li {
+			margin-top: $space-height;
+		}
 	}
 }

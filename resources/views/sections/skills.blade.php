@@ -3,22 +3,24 @@
 	<header>Skills</header>
 
 	<ul>
-		<li>Familiar with basic computer hardware troubleshooting</li>
-		<li>Familiar with Command-line, Git (Version Control System), SSH, Basic Linux/UNIX commands</li>
+	@foreach($my->skill_categories as $category)
 		<li>
-			Familiar with the following languages:
-			<p class="is-indented">{{ implode(', ', $my->languages) }}</p>
-		</li>
+			<strong>{{ $category->name }}:</strong>
+			{{ implode(', ', $category->skills) }}
 
-		<li>
-			Familiar with the following web development technologies:
-			@include('list', ['items' => $my->web_techs])
+			@if(isset($category->subcategories))
+				<ul>
+				@foreach($category->subcategories as $subcategory)
+					<li>
+						<strong>{{ $subcategory->name }}:</strong>
+						{{ implode(', ', $subcategory->skills) }}
+					</li>
+				@endforeach
+				</ul>
+			@endif
+				
 		</li>
-
-		<li>
-			Familiar with the following concepts:
-			@include('list', ['items' => $my->concepts])
-		</li>
+	@endforeach
 	</ul>
 
 </section>

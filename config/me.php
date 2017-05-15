@@ -2,7 +2,7 @@
 
 return [
 
-	'spaces' => 2,
+	'spaces' => 4,
 
 	//-------------------------------------------------------------------------
 	// Basic Info
@@ -17,24 +17,53 @@ return [
 	//-------------------------------------------------------------------------
 	// Skills
 	//-------------------------------------------------------------------------
-	'languages' => [
-		'HTML',
-		'CSS',
-		'JavaScript',
-		'PHP',
-		'MySQL',
-	],
-	'web_techs' => [
-		'Sass (CSS Preprocessor)',
-		'jQuery (JavaScript Library)',
-		'Bootstrap and Foundation (Responsive Front-End Frameworks)',
-		'Laravel (PHP MVC Framework)',
-		'Gulp (Task runner)',
-		'npm/Yarn for JavaScript and Composer for PHP (Package managers)',
-	],
-	'concepts' => [
-		'Responsive web design',
-		'MVC architectural pattern',
+	'skill_categories' => [
+		[
+			'name' => 'General',
+			'skills' => [
+				'Basic hardware and software troubleshooting',
+				'Command-line (Windows and Linux)',
+			],
+		],
+		[
+			'name' => 'Programming',
+			'skills' => [
+				'Git version control system',
+				'MVC software architecture',
+			],
+		],
+		[
+			'name' => 'Web development',
+			'skills' => [
+				'Single-page applications',
+				'Basic Linux server knowledge',
+			],
+			'subcategories' => [
+				[
+					'name' => 'Frontend',
+					'skills' => [
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Responsive web design',
+						'jQuery',
+						'Vue.js',
+						'Bootstrap',
+						'Sass',
+					],
+				],
+				[
+					'name' => 'Backend',
+					'skills' => [
+						'PHP',
+						'MySQL',
+						'Laravel PHP framework',
+						'AJAX',
+						'RESTful JSON APIs',
+					],
+				],
+			],
+		],
 	],
 
 	//-------------------------------------------------------------------------
