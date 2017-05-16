@@ -1,4 +1,18 @@
 .basic {
+	.title {
+		font-weight: bold;
+		font-size: 1.3em;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 3px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	.image {
 		width: 150px;
 	}

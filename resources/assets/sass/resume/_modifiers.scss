@@ -6,13 +6,6 @@
 	padding-left: $indent-size;
 }
 
-.title {
-	font-weight: bold;
-	font-size: 1.3em;
-	text-transform: uppercase;
-	@include space-after;
-}
-
 .clear {
 	@include clearfix;
 }

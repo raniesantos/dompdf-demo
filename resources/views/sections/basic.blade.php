@@ -4,7 +4,7 @@
 		<p class="title">{{ $my->fullname }}</p>
 
 		<p>{{ $my->address }}</p>
-		<a href="mailto:{{ $my->email }}">{{ $my->email }}</a>
+		<p><a href="mailto:{{ $my->email }}">{{ $my->email }}</a></p>
 		<p><a href="{{ $my->website }}">{{ $my->website }}</a></p>
 		@if($mobile)
 			<p>{{ $my->mobile_sun }}</p>
