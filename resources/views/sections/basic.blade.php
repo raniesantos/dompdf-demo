@@ -7,7 +7,8 @@
 		<a href="mailto:{{ $my->email }}">{{ $my->email }}</a>
 		<p><a href="{{ $my->website }}">{{ $my->website }}</a></p>
 		@if($mobile)
-			<p>{{ $my->mobile }}</p>
+			<p>{{ $my->mobile_sun }}</p>
+			<p>{{ $my->mobile_globe }}</p>
 		@endif
 	</div>
 
