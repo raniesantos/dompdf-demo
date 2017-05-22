@@ -11,8 +11,8 @@ return [
 	'address' => env('MY_ADDRESS', ''),
 	'email' => env('MY_EMAIL', ''),
 	'website' => 'http://raniesantos.github.io',
-	'mobile_sun' => env('MY_MOBILE_SUN', ''),
-	'mobile_globe' => env('MY_MOBILE_GLOBE', ''),
+	'mobile_a' => env('MY_MOBILE_A', ''),
+	'mobile_b' => env('MY_MOBILE_B', ''),
 	'photo' => 'img/my-photo.png',
 
 	//-------------------------------------------------------------------------
