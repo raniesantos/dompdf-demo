@@ -10,12 +10,6 @@ class DownloadController extends Controller
 {
     public function download()
     {
-        $filesDir = public_path('/files');
-        
-        if (!File::exists($filesDir)) {
-            File::makeDirectory($filesDir);
-        }
-        
         // public, no mobile number
         PDF::loadView('resume', ['mobile' => false])
             ->save($pdfA = 'files/ranie-santos-resume-a.pdf');
@@ -26,11 +20,13 @@ class DownloadController extends Controller
 
         $zipFilename = 'resume-' . strtolower(date('M.d.Y-H.i.s')) . '.zip';
 
-        Zipper::make($zip = public_path('files/zip/' . $zipFilename))->add([
+        Zipper::make($zip = public_path('files/' . $zipFilename))->add([
             public_path($pdfA),
             public_path($pdfB),
             public_path('files/checklist.txt'),
         ])->close();
+
+        File::delete($pdfA, $pdfB);
 
         return response()
             ->download($zip)
