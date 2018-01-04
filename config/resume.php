@@ -2,7 +2,7 @@
 
 return [
 
-    'spaces' => 4,
+    'spaces' => 6,
 
     //-------------------------------------------------------------------------
     // Basic Info
@@ -45,10 +45,11 @@ return [
                     'skills' => [
                         'HTML',
                         'CSS',
-                        'JavaScript',
-                        'Responsive web design',
+                        'JavaScript + ES6',
+                        'Responsive design',
+                        'AJAX',
                         'jQuery',
-                        'Vue.js',
+                        'Vue.js framework',
                         'Bootstrap',
                         'Sass',
                     ],
@@ -59,8 +60,7 @@ return [
                         'PHP',
                         'MySQL',
                         'Laravel PHP framework',
-                        'AJAX',
-                        'RESTful JSON APIs',
+                        'RESTful APIs',
                     ],
                 ],
             ],
